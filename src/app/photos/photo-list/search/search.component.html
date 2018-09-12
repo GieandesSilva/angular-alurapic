@@ -1,0 +1,11 @@
+<div class="text-center col-md-4 mt-5 mb-5 offset-md-4">
+    <form>
+        <div class="input-group mb-3">
+            <input type="search" class="form-control form-control-lg" aria-describedby="searchHelp" placeholder="Search ..." autofocus (keyup)="debounce.next($event.target.value)" [value]="value">
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+            </div>
+        </div>
+        <small id="searchHelp" class="form-text text-muted">Search For Photos by Description</small>
+    </form>
+</div>
