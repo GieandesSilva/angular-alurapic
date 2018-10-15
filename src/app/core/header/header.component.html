@@ -1,0 +1,15 @@
+<header class="sticky-top">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand"><i class="fa fa-camera"></i> ALURAPIC</a>
+        <div *ngIf="(user$ | async) as user; else login">
+            <i class="fa fa-user-circle"></i>
+            <a> {{ user.name }} </a>
+            <a (click)="logout()">Logout</a>
+        </div>
+        <ng-template #login>
+            <span class="navbar-text">
+                <a [routerLink]="['']">Please, Login!</a>
+            </span>
+        </ng-template>
+    </nav>
+</header>
